@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src *;
+			style-src * 'self' http://* 'unsafe-inline';
+			media-src *; 
+            img-src * 'self' data: https:;
+			script-src * 'self' http://* 'unsafe-inline' 'unsafe-eval'"
+		/>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta
+			name="viewport"
+			content="initial-scale=1, width=device-width, viewport-fit=cover"
+		/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" href="css/calendar.css" />
+		<script
+			src="https://kit.fontawesome.com/8aaebfcff1.js"
+			crossorigin="anonymous"
+		></script>
+		<title>RemMe</title>
+	</head>
+	<body>
+		<!-------------------Home Page----------------->
+		<div class="page active" id="home">
+			<div class="top">
+				<div>
+					<h2><strong>Your Next Reminder</strong></h2>
+					<br />
+					<div id="next-reminder">
+						<h3>---- ---------</h3>
+						<h1>00:00</h1>
+						<h3 style="text-align: right;">AM</h3>
+					</div>
+					<br />
+					<h2 id="timer">Time Remaining<br />00:00:00</h2>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="reminders-list"></div>
+				<a href="#">
+					<img
+						src="assets/addicon.svg"
+						data-target="formcontainer"
+						class="nav-link float"
+					/>
+				</a>
+			</div>
+		</div>
+
+		<!------------------Add a reminder form page------------------------>
+		<div class="page" id="formcontainer">
+			<a href="#">
+				<img
+					src="assets/returnicon.svg"
+					data-target="home"
+					class="nav-link backarrow"
+				/>
+			</a>
+			<h3>Add a New Reminder</h3>
+			<div class="addreminder">
+				<form id="reminder-form">
+					<input
+						id="remindername"
+						type="text"
+						name="reminder-name"
+						placeholder="Remind me to..."
+					/>
+
+					<input
+						type="radio"
+						id="time-based"
+						name="reminder-type"
+						value="time-based"
+						checked
+					/>
+					<label for="time-based" style="display: inline; font-weight: 500;"
+						>Time-Based</label
+					>
+					<div class="twocolgrid">
+						<div>
+							<label id="date-label" style="font-size: 1rem;">Date</label>
+							<input id="reminderdate" type="date" name="date" />
+						</div>
+
+						<div>
+							<label id="time-label" style="font-size: 1rem;">Time</label>
+							<input
+								style="width: 20vw;"
+								id="remindertime"
+								type="time"
+								name="time"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							id="location-based"
+							name="reminder-type"
+							value="location-based"
+						/>
+						<label
+							for="location-based"
+							style="display: inline; font-weight: 500;"
+							>Location-Based</label
+						>
+						<input
+							style="margin-left: 7.5vw; width: 60vw; height: 5vh;"
+							id="rem-location"
+							type="text"
+							placeholder="Enter an Address"
+						/>
+						<i
+							style="
+								background-color: #8620d0;
+								padding: 0.9rem;
+								border-radius: 5px;
+								font-size: 1.1rem;
+								opacity: 0.4;
+							"
+							class="fas fa-search-location"
+						></i>
+					</div>
+
+					<br />
+
+					<label style="font-size: 1.2rem;">Get Directions to Location</label
+					><label style="font-size: 1rem;">(Optional)</label>
+					<input
+						id="rem-dest"
+						type="text"
+						name="location"
+						placeholder="Enter an Address"
+					/>
+
+					<div style="margin-bottom: 5vh;">
+						<label style="font-size: 1.2rem;">Attach an Image</label
+						><label style="font-size: 1rem;">(Optional)</label>
+						<label id="imgURI"> None Selected </label>
+						<div style="float: right; margin-top: 0.8vh;">
+							<a id="gallLink"
+								><img
+									src="assets/gallery.png"
+									height="40px"
+									width="40px"
+									style="border-radius: 5px; opacity: 85%;"
+								/>
+							</a>
+							<a id="camLink"
+								><img
+									src="assets/camera.png"
+									height="40px"
+									width="40px"
+									style="border-radius: 5px; opacity: 85%;"
+								/>
+							</a>
+						</div>
+					</div>
+
+					<label style="display: inline; font-size: 1.2rem;">
+						Text-to-speech</label
+					>
+					<label style="opacity: 90%;" class="switch2">
+						<input id="texttospeech" type="checkbox" checked />
+						<span class="slider round"></span>
+					</label>
+
+					<div style="text-align: center; margin-top: 3.5vh;">
+						<input type="submit" value="Save" class="formbutton" />
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!---------------------Sleep Music Page---------------------->
+		<div class="page" id="sleeptracks">
+			<h1>Sleep Music</h1>
+			<div class="sleepmusicmain">
+				<!-- 1 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 2 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 3 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 4 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 5 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 6 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 7 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+				<!-- 8 -->
+				<div class="column">
+					<audio id="audio_play">
+						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
+					</audio>
+					<img
+						src="assets/1.jpg"
+						alt="rain"
+						width="100%"
+						onClick="document.getElementById('audio_play').play(); return false;"
+					/>
+				</div>
+			</div>
+		</div>
+		<!--------------------- Calendar Page --------------------->
+		<div class="page" id="calendar">
+			<div id="calendar-container">
+				<div class="button-container-calendar">
+					<button id="previous">&#8249;</button>
+					<button id="next">&#8250;</button>
+					<h3 id="monthHeader"></h3>
+					<p id="yearHeader"></p>
+				</div>
+
+				<table class="table-calendar" id="calendar">
+					<thead id="thead-month"></thead>
+					<tbody id="calendar-body"></tbody>
+				</table>
+
+				<div class="footer-container-calendar">
+					<label for="month">Jump To: </label>
+					<select id="month">
+						<option value="0">Jan</option>
+						<option value="1">Feb</option>
+						<option value="2">Mar</option>
+						<option value="3">Apr</option>
+						<option value="4">May</option>
+						<option value="5">Jun</option>
+						<option value="6">Jul</option>
+						<option value="7">Aug</option>
+						<option value="8">Sep</option>
+						<option value="9">Oct</option>
+						<option value="10">Nov</option>
+						<option value="11">Dec</option>
+					</select>
+					<select id="year"></select>
+				</div>
+			</div>
+			<div id="calendar-reminders">
+				<p id="date-picked"></p>
+				<ul id="calendar-reminders-list"></ul>
+			</div>
+		</div>
+		<!----------------------Settings Page----------------------->
+		<div class="page" id="settings">
+			<div class="sticky"><h2>Settings</h2></div>
+
+			<div class="grid-container">
+				<div class="item1">
+					Report a Problem
+					<div class="left" class="center">
+						<img src="assets/report.png" class="left" height="25" width="25" />
+					</div>
+						<img src="assets/arrow.png" class="right" height="25" width="25" />
+				</div>
+
+				<div class="item2">
+					Terms and condition
+					<div class="left" class="center">
+						<img
+							src="assets/termsandcondtion.png"
+							class="left"
+							height="25"
+							width="25"
+						/>
+					</div>
+						<img src="assets/arrow.png" class="right" height="25" width="25" />
+				</div>
+
+				<div class="item3">
+					Display
+					<div class="left" class="center">
+						<img src="assets/display.png" class="left" height="25" width="25" />
+					</div>
+						<img src="assets/arrow.png" class="right" height="25" width="25" />
+				</div>
+
+				<div class="item4">
+					About Us
+					<div class="left" class="center">
+						<img src="assets/aboutus.png" class="left" height="25" width="25" />
+					</div>
+						<img src="assets/arrow.png" class="right" height="25" width="25" />
+				</div>
+			</div>
+			<div class="voicereminder">
+				<img src="assets/voicereminder.png" class="center" height="250""
+				width="250">
+			</div>
+			<div class="copyrights">
+				This Application is copyright by @University of eastlondon
+			</div>
+		</div>
+		<!----------------------Map Page----------------------->
+		<div class="page" id="map"></div>
+		<!--------------------- Navigation Bar --------------------->
+		<div class="navbar">
+			<a href="#" class="active" data-target="home">
+				<img
+					src="assets/homeactive.svg"
+					data-target="home"
+					class="nav-link navicon"
+				/>
+			</a>
+			<a href="#" data-target="calendar">
+				<img
+					src="assets/calendar.svg"
+					data-target="calendar"
+					class="nav-link navicon"
+				/>
+			</a>
+			<a href="#" data-target="sleeptracks">
+				<img
+					src="assets/sleeptracks.svg"
+					data-target="sleeptracks"
+					class="nav-link navicon"
+				/>
+			</a>
+			<a href="#" data-target="settings">
+				<img
+					src="assets/settings.svg"
+					data-target="settings"
+					class="nav-link navicon"
+				/>
+			</a>
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/calendar.js"></script>
+	</body>
+</html>

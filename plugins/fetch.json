@@ -1,0 +1,76 @@
+{
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@4.1.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+"
+    }
+  },
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-tts": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-tts"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-nativegeocoder": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativegeocoder"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-add-swift-support": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-add-swift-support@2.0.2"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-geolocation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-geolocation@4.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-local-notification": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-local-notification"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-badge": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-badge@>=0.8.5"
+    },
+    "is_top_level": false,
+    "variables": {}
+  }
+}
