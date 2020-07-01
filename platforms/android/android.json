@@ -31,6 +31,10 @@
             {
               "xml": "<feature name=\"LocalNotification\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.localnotification.LocalNotification\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -139,6 +143,12 @@
     },
     "cordova-plugin-local-notification": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-shake": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },
   "dependent_plugins": {},
@@ -246,6 +256,30 @@
         "cordova.plugins.notification.local.core",
         "plugin.notification.local.core"
       ]
+    },
+    {
+      "id": "cordova-plugin-device-motion.Acceleration",
+      "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
+      "pluginId": "cordova-plugin-device-motion",
+      "clobbers": [
+        "Acceleration"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device-motion.accelerometer",
+      "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
+      "pluginId": "cordova-plugin-device-motion",
+      "clobbers": [
+        "navigator.accelerometer"
+      ]
+    },
+    {
+      "id": "cordova-plugin-shake.Shake",
+      "file": "plugins/cordova-plugin-shake/www/shake.js",
+      "pluginId": "cordova-plugin-shake",
+      "clobbers": [
+        "shake"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -257,6 +291,8 @@
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-badge": "0.8.8",
-    "cordova-plugin-local-notification": "0.9.0-beta.2"
+    "cordova-plugin-local-notification": "0.9.0-beta.2",
+    "cordova-plugin-device-motion": "2.0.1",
+    "cordova-plugin-shake": "0.7.0"
   }
 }

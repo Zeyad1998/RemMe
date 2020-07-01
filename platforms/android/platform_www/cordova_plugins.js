@@ -103,6 +103,30 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
         "cordova.plugins.notification.local.core",
         "plugin.notification.local.core"
       ]
+    },
+    {
+      "id": "cordova-plugin-device-motion.Acceleration",
+      "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
+      "pluginId": "cordova-plugin-device-motion",
+      "clobbers": [
+        "Acceleration"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device-motion.accelerometer",
+      "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
+      "pluginId": "cordova-plugin-device-motion",
+      "clobbers": [
+        "navigator.accelerometer"
+      ]
+    },
+    {
+      "id": "cordova-plugin-shake.Shake",
+      "file": "plugins/cordova-plugin-shake/www/shake.js",
+      "pluginId": "cordova-plugin-shake",
+      "clobbers": [
+        "shake"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -114,6 +138,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-badge": "0.8.8",
-    "cordova-plugin-local-notification": "0.9.0-beta.2"
+    "cordova-plugin-local-notification": "0.9.0-beta.2",
+    "cordova-plugin-device-motion": "2.0.1",
+    "cordova-plugin-shake": "0.7.0"
   };
 });

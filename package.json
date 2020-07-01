@@ -18,9 +18,11 @@
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-device": "^2.0.3",
+    "cordova-plugin-device-motion": "^2.0.1",
     "cordova-plugin-geolocation": "^4.0.2",
     "cordova-plugin-local-notification": "^0.9.0-beta.2",
     "cordova-plugin-nativegeocoder": "^3.4.1",
+    "cordova-plugin-shake": "^0.7.0",
     "cordova-plugin-tts": "^0.2.3"
   },
   "cordova": {
@@ -30,7 +32,8 @@
       "cordova-plugin-tts": {},
       "cordova-plugin-nativegeocoder": {},
       "cordova-plugin-geolocation": {},
-      "cordova-plugin-local-notification": {}
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-shake": {}
     },
     "platforms": [
       "android"

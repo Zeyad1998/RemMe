@@ -179,103 +179,47 @@
 
 		<!---------------------Sleep Music Page---------------------->
 		<div class="page" id="sleeptracks">
-			<h1>Sleep Music</h1>
+			<div class="sticky"><h2>Sleep Music</h2></div>
 			<div class="sleepmusicmain">
 				<!-- 1 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img id="forestImg" src="assets\1.jpg" alt="rain" width="100%" />
+					<audio id="audio" src="assets\forest1.mp3"></audio>
 				</div>
 				<!-- 2 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\2.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio1" src="assets\waterfall2.mp3"></audio>
 				</div>
 				<!-- 3 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\3.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio" src="assets\campfire3.mp3"></audio>
 				</div>
 				<!-- 4 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\4.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio" src="assets\waves4.mp3"></audio>
 				</div>
 				<!-- 5 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\5.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio" src="assets\forest5.mp3"></audio>
 				</div>
 				<!-- 6 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\6.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio" src="assets\Natures6.mp3"></audio>
 				</div>
 				<!-- 7 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\7.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio" src="assets\forest7.mp3"></audio>
 				</div>
 				<!-- 8 -->
 				<div class="column">
-					<audio id="audio_play">
-						<source src="assets/Rain-fall-ambience.mp3" type="audio/mp3" />
-					</audio>
-					<img
-						src="assets/1.jpg"
-						alt="rain"
-						width="100%"
-						onClick="document.getElementById('audio_play').play(); return false;"
-					/>
+					<img src="assets\8.jpg" alt="rain" width="100%" onclick="play()" />
+					<audio id="audio" src="assets\rain8.mp3"></audio>
 				</div>
 			</div>
 		</div>
@@ -328,7 +272,7 @@
 					<div class="left" class="center">
 						<img src="assets/report.png" class="left" height="25" width="25" />
 					</div>
-						<img src="assets/arrow.png" class="right" height="25" width="25" />
+					<img src="assets/arrow.png" class="right" height="25" width="25" />
 				</div>
 
 				<div class="item2">
@@ -341,7 +285,7 @@
 							width="25"
 						/>
 					</div>
-						<img src="assets/arrow.png" class="right" height="25" width="25" />
+					<img src="assets/arrow.png" class="right" height="25" width="25" />
 				</div>
 
 				<div class="item3">
@@ -349,15 +293,15 @@
 					<div class="left" class="center">
 						<img src="assets/display.png" class="left" height="25" width="25" />
 					</div>
-						<img src="assets/arrow.png" class="right" height="25" width="25" />
+					<img src="assets/arrow.png" class="right" height="25" width="25" />
 				</div>
 
-				<div class="item4">
+				<div class="item4 nav-link" data-target="aboutUs">
 					About Us
 					<div class="left" class="center">
 						<img src="assets/aboutus.png" class="left" height="25" width="25" />
 					</div>
-						<img src="assets/arrow.png" class="right" height="25" width="25" />
+					<img src="assets/arrow.png" class="right" height="25" width="25" />
 				</div>
 			</div>
 			<div class="voicereminder">
@@ -368,8 +312,60 @@
 				This Application is copyright by @University of eastlondon
 			</div>
 		</div>
-		<!----------------------Map Page----------------------->
-		<div class="page" id="map"></div>
+		<!----------------------About Us Page----------------------->
+		<div class="page" id="aboutUs">
+			<div class="about-section">
+				<h2>About Us</h2>
+				<h3>This Mobile Application is Developed By</h3>
+				<h3>University East London BSc Computer Science Batch 2018-2020</h3>
+			</div>
+
+			<h2 style="text-align: center;">Our Team</h2>
+			<div class="row">
+				<div class="column">
+					<div class="card">
+						<div class="container">
+							<h3>Zeyad Mahagna</h3>
+							<p class="title">Developer</p>
+							<p>u1737679@uel.ac.uk</p>
+							<p><button class="button">Contact</button></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="card">
+						<div class="container">
+							<h3>Ahammed Anshad</h3>
+							<p class="title">Developer</p>
+							<p>u1736927@uel.ac.uk</p>
+							<p><button class="button">Contact</button></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="card">
+						<div class="container">
+							<h3>Mohammed Hadi</h3>
+							<p class="title">Developer</p>
+							<p>u1711079@uel.ac.uk</p>
+							<p><button class="button">Contact</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card">
+					<div class="container" style="margin-bottom: 100px;">
+						<h3>Dhara Parekh</h3>
+						<p class="title">Developer</p>
+						<p>u1735975@uel.ac.uk</p>
+						<p><button class="button">Contact</button></p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!--------------------- Navigation Bar --------------------->
 		<div class="navbar">
 			<a href="#" class="active" data-target="home">

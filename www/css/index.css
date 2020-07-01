@@ -295,7 +295,7 @@ input[type="radio"]:checked + label {
 	margin-top: 3vh;
 	border-bottom: 1px solid black;
 	font-size: 1rem;
-	opacity:75%;
+	opacity: 75%;
 	width: 71%;
 }
 
@@ -361,72 +361,179 @@ input[type="radio"]:checked + label {
 #map {
 	height: 80vh;
 	width: 80vw;
-	margin:auto;
+	margin: auto;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-rows: auto auto auto auto ;
-    grid-gap: 10px;
-    background-color: white;
-    margin-top: 15px;
-   
-  }
-  
-  .grid-container > div {
-    background-color: whitesmoke;
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+	grid-gap: 10px;
+	background-color: white;
+	margin-top: 15px;
+}
+
+.grid-container > div {
+	background-color: whitesmoke;
 	text-align: center;
-    padding: 15px;
-    font-size: 16px;
+	padding: 15px;
+	font-size: 16px;
 	font-weight: bolder;
-    margin-left: 1vw;
+	margin-left: 1vw;
+}
+
+.item1 {
+	grid-row: 1 / 4;
+}
+.sticky {
+	position: sticky;
+	top: 0;
+	padding: 15px;
+	background: linear-gradient(#a62bff, #a11fd5);
+	font-weight: bolder;
+	font-size: 20px;
+	color: white;
+}
+
+.left {
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+
+.right {
+	float: right;
+	width: 30px;
+	height: 30px;
+}
+
+.right {
+	float: center;
+	width: 20px;
+	height: 20px;
+}
+.center1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.voicereminder {
+	text-align: center;
+	align-items: center;
+}
+
+.copyrights {
+	font-weight: bolder;
+	margin-left: 50px;
+	margin-top: 100px;
+}
+
+.audio-player {
+	background: white;
+	border: 1px solid lighten(#acacac, 20%);
+	width: 50vw;
+	text-align: center;
+	display: flex;
+	flex-flow: row;
+	margin: 4rem 0 4rem 0;
+}
+.album-image {
+	min-height: 100px;
+	width: 110px;
+	background-size: cover;
+}
+.player-controls {
+	align-items: center;
+	justify-content: center;
+	margin-top: 2.5rem;
+	flex: 3;
+}
+progress {
+	width: 90%;
+}
+progress[value] {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: white;
+	color: blue;
+	height: 5px;
+}
+progress[value]::-webkit-progress-bar {
+	background-color: white;
+	border-radius: 2px;
+	border: 1px solid lighten(#acacac, 20%);
+	color: blue;
+}
+progress::-webkit-progress-value {
+	background-color: blue;
+}
+p {
+	font-size: 1.6rem;
+}
+
+#play-btn {
+	background-image: url("http://www.lukeduncan.me/images/play-button.png");
+	background-size: cover;
+	width: 75px;
+	height: 75px;
+	margin: 2rem 0 2rem 2rem;
+}
+.pause {
+	background-image: url("http://www.lukeduncan.me/images/pause-button.png");
+}
+
+.column {
+	float: left;
+	width: 33.3%;
+	margin-bottom: 10px;
+	padding: 0 8px;
   }
   
-  .item1 {
-    grid-row: 1 / 4;
+  .card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin: 8px;
+  }
+  
+  .about-section {
+	padding: 50px;
+	text-align: center;
+	background: linear-gradient(#a62bff, #a11fd5);
+	color: white;
+  }
+  
+  .container {
+	padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+  .title {
+	color: grey;
+  }
+  
+  .button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background: linear-gradient(#a62bff, #a11fd5);;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+  }
+  
+  .button:hover {
+	background-color: #555;
   }
 
-  div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    padding: 15px ;
-    background: linear-gradient(#A62BFF, #A11FD5);
-    font-weight: bolder;
-    font-size: 20px;
-    color:white;
-  }
-
-  .left {
-    float: left;
-    width: 40px;
-    height: 40px;
-  }
-
-  .right {
-    float: right;
-    width: 30px;
-    height: 30px;
-  }
-
-  .right {
-    float: center;
-    width: 20px;
-    height: 20px;
-  }
-  .center1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .voicereminder{
-    text-align: center;
-    align-items: center;
-  }
-
-  .copyrights{
-    text-align: center;
-    margin-left: auto;
-    font-weight: bolder;
+  @media screen and (max-width: 650px) {
+	.column {
+	  width: 100%;
+	  display: block;
+	}
   }

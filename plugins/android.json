@@ -25,6 +25,9 @@
     },
     "cordova-plugin-local-notification": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-shake": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },
   "dependent_plugins": {
@@ -35,6 +38,9 @@
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
     "cordova-plugin-badge": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-device-motion": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   }

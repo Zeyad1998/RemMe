@@ -65,10 +65,6 @@ class UI {
 		const id = new Date().getMilliseconds();
 
 		if (reminder.destination) {
-			cordova.plugins.notification.local.addActions("yes-no", [
-				{ id: "yes", title: "Yes", launch: true },
-				{ id: "no", title: "No" },
-			]);
 			if (reminder.timeBased)
 				cordova.plugins.notification.local.schedule({
 					id: id,
@@ -80,7 +76,10 @@ class UI {
 					vibrate: true,
 					attachments: [reminder.image],
 					at: reminder.getDate(),
-					actions: "yes-no",
+					actions: [
+						{ id: "yes", title: "Yes", launch: true },
+						{ id: "no", title: "No" },
+					],
 				});
 			else {
 				nativegeocoder.forwardGeocode(
@@ -100,7 +99,10 @@ class UI {
 								radius: 15,
 								notifyOnEntry: true,
 							},
-							actions: "yes-no",
+							actions: [
+								{ id: "yes", title: "Yes", launch: true },
+								{ id: "no", title: "No" },
+							],
 						}),
 					(err) => alert(err.message),
 					reminder.location,
@@ -536,6 +538,29 @@ let app = {
 				document.querySelector("i").style.opacity = "1";
 			}
 		});
+
+		//Event: Shake to play/pause sleep music
+		var myAudio = document.getElementById("audio");
+		var isPlaying = false;
+		function togglePlay() {
+			if (isPlaying) {
+				myAudio.pause();
+			} else {
+				myAudio.play();
+			}
+		}
+		myAudio.onplaying = function () {
+			isPlaying = true;
+		};
+		myAudio.onpause = function () {
+			isPlaying = false;
+		};
+		document.querySelector("#forestImg").addEventListener("click", (e) => {
+			togglePlay();
+		});
+		shake.startWatch(() => {
+			togglePlay();
+		}, 80);
 	},
 	nav: function (e) {
 		e.preventDefault();

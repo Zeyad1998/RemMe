@@ -1,0 +1,68 @@
+{
+  "_from": "cordova-plugin-shake",
+  "_id": "cordova-plugin-shake@0.7.0",
+  "_inBundle": false,
+  "_integrity": "sha512-t14DnwxCVQGlI7DwLg+EIAg+xbO1n0zzYioSrv0OmJoVD0P0Ws+ygEUWbSpyZ/d7/EfMX/1ruH1ydZViN6HgLw==",
+  "_location": "/cordova-plugin-shake",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-shake",
+    "name": "cordova-plugin-shake",
+    "escapedName": "cordova-plugin-shake",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-shake/-/cordova-plugin-shake-0.7.0.tgz",
+  "_shasum": "6153fb42f51222e1182f8409d18dcf351d355dad",
+  "_spec": "cordova-plugin-shake",
+  "_where": "C:\\Users\\Zeyad\\Desktop\\RemMe",
+  "author": {
+    "name": "Lee Crossley",
+    "email": "leee@hotmail.co.uk",
+    "url": "http://ilee.co.uk/"
+  },
+  "bugs": {
+    "url": "https://github.com/leecrossley/cordova-plugin-shake-detection/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-shake",
+    "platforms": []
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "deprecated": false,
+  "description": "Cordova Plugin to detect when a physical device performs a shake gesture.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=5.0.0"
+    }
+  ],
+  "homepage": "https://github.com/leecrossley/cordova-plugin-shake-detection#readme",
+  "keywords": [
+    "cordova",
+    "shake",
+    "gesture",
+    "accelerometer",
+    "acceleration",
+    "detection",
+    "ecosystem:cordova"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-shake",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leecrossley/cordova-plugin-shake-detection.git"
+  },
+  "version": "0.7.0"
+}
